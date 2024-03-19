@@ -1,4 +1,5 @@
 # FLEXUGCCODESOCRAUTOENTER
+I made this in like a hour without knowing dogshit so expect bugs 
 # How to use?
 The best way is to download ShareX https://getsharex.com/downloads (i use the STEAM version)
 ![image](https://github.com/JustAP1ayer/FLEXUGCCODESOCRAUTOENTER/assets/70037178/376d6dcd-6fab-4b2e-852a-f97d60591cff)
