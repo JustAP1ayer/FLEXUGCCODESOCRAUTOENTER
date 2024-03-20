@@ -8,9 +8,9 @@ def check_clipboard():
     copied = False
     while True:
         try:
-            buy = pyautogui.locateCenterOnScreen('buy.png', confidence=0.8) 
-            buy2 = pyautogui.locateCenterOnScreen('buy2.png', confidence=0.8) 
-            redeem = pyautogui.locateCenterOnScreen('redeem.png', confidence=0.8) 
+            buy = pyautogui.locateCenterOnScreen('buy.png', confidence=0.7) 
+            buy2 = pyautogui.locateCenterOnScreen('buy2.png', confidence=0.7) 
+            redeem = pyautogui.locateCenterOnScreen('redeem.png', confidence=0.7) 
             current_content = pyperclip.paste()
             if current_content != prev_content and (buy or buy2):
                 if buy:
@@ -18,10 +18,10 @@ def check_clipboard():
                 else:
                     pyautogui.moveTo(buy2)
 
-                pyautogui.click(clicks=2)
+                pyautogui.click(clicks=5)
                 if copied == False:
                     pyautogui.hotkey("ctrl", "v")
-                    time.sleep(0.1)
+                    time.sleep(0.15)
                     send_keys('{ENTER}')
 
                     copied = True
@@ -38,8 +38,6 @@ def check_clipboard():
                     pyautogui.moveTo(buy2)
 
                 pyautogui.click(clicks=2)
-                for i in range(70):
-                    send_keys('{BACKSPACE}')
             time.sleep(0.1)
         except Exception as e:
             print(f"An error occurred: {e}")
